@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <title>Sky Survey</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-bar">
+                <a href="/api/questions">Sky Survey</a>
+                <a href="/api/questions/responses">View Responses</a>
+            </div>
+        </nav>
+        <main>
+            <form id="survey-form" action="/api/questions/responses" method="post" enctype="multipart/form-data">
+                <p id="error-message" style="display: none; color: red; font-style: italic;">
+                    This field is required
+                </p>
+                <div class="quiz-box" id="quiz-box">
+
+                </div>
+            </form>
+        </main>
+    </body>
+    <script src="/static/js/main.js"></script>
+</html>

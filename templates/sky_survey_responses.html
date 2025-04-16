@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <title>Sky Survey</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-bar">
+                <a href="/api/questions">Sky Survey</a>
+                <a href="/api/questions/responses">View Responses</a>
+            </div>
+        </nav>
+        <main>
+            <div class="responses">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email Address</th>
+                            <th>Description</th>
+                            <th>Gender</th>
+                            <th>Programming Stack</th>
+                            <th>Certificates</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for record in records %}
+                            <tr>
+                                {% for r in range(5) %}
+                                    <td> {{record[r]}} </td>
+                                {% endfor %}
+                                <td>
+                                    {% for r in range(5, record|length + 1 ) %}
+                                        {% if record[r] != record[1] %}
+                                            <a href="/api/questions/responses/certificates/{{ record[r] }}" id="cert-id" target="_blank"> {{ record[r] }} </a>
+                                        {%endif %}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+    <script src="/static/js/main.js"></script>
+</html>

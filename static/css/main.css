@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    border-bottom: .05em solid black;
+    background-color: rgb(197, 214, 2527);
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.nav-bar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+nav a {
+    font-size: .9em;
+    padding: 0 .3em 0 .3em;
+    margin: 0 .3em 0 .3em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(197, 214, 252);
+    height: 95vh;
+}
+
+.quiz-box {
+    display: grid;
+    border: none;
+    border-radius: .2em;
+    width: 40vw;
+    height: fit-content;
+    margin-top: 5vh;
+    padding: 1.5em;
+    box-shadow: .2em .3em .3em .2em rgb(115, 131, 212);
+}
+
+label {
+    font-size: .9em;
+    padding: 0 0 .8em 0;
+}
+
+input {
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: .2em;
+    padding: .5em;
+}
+
+textarea {
+    height: 25vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: .9em;
+}
+
+button {
+    border: none;
+    width: 7vw;
+    background-color: white;
+    border-radius: .2em;
+    padding: .3em;
+    box-shadow: .1em .2em .2em .1em rgb(115, 131, 212);
+}
+
+#next-button {
+    margin-left: 17vw;
+}
+
+#review-button {
+    margin-left: 17vw;
+}
+
+table {
+    border-collapse: collapse;
+    max-width: 90vw;
+    margin-top: 3vh;
+}
+
+tr {
+    justify-items: center;
+}
+
+th, td {
+    border: 1px solid white;
+    min-width: 10vw;
+    padding: 0 .2em 0 .4em;
+}
+
+#cert-id {
+    color: blue;
+}
+
+#cert-id:hover {
+    color: white;
+}
